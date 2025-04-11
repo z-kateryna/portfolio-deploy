@@ -1,0 +1,124 @@
+@use "../../assets/styles/partials/typography";
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/globals" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  justify-content: center;
+
+  &__header {
+    font-size: 1.75rem;
+    text-align: left;
+    padding-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__comment {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    flex-direction: column;
+  }
+
+  &__comment-wrapper {
+    display: flex;
+  }
+
+  &__quote--up {
+    font-size: 3rem;
+    font-family: "DMSans";
+    font-style: italic;
+    margin-left: -1.25rem;
+    padding-right: 0.25rem;
+    line-height: 1;
+  }
+
+  &__quote--down {
+    font-size: 3rem;
+    font-family: "DMSans";
+    font-style: italic;
+    line-height: 1;
+    vertical-align: -0.9rem;
+  }
+
+  &__copy {
+    font-size: 1.25rem;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  &__author {
+    font-size: 1rem;
+    text-align: left;
+    padding-top: 0.5rem;
+    color: #606367;
+  }
+
+  &__author--link {
+    color: $copy;
+    text-decoration: underline;
+  }
+
+  @include tablet {
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    &__comment {
+      display: flex;
+      width: 47%;
+      margin-bottom: 2rem;
+      flex-direction: column;
+    }
+  }
+
+  @include desktop {
+    &__header {
+      font-size: 2.5rem;
+      text-align: left;
+      padding-bottom: 4rem;
+      font-weight: 600;
+    }
+
+    &__copy {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    &__comment {
+      display: flex;
+      width: 590px;
+      margin-bottom: 4rem;
+      flex-direction: column;
+    }
+
+    &__author {
+      font-size: 1.5rem;
+      text-align: left;
+      padding-top: 1rem;
+      color: #606367;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  }
+}

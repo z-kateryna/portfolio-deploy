@@ -1,0 +1,10 @@
+@use '../../assets/styles/partials/typography';
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/globals" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+p {
+    font-family: 'DMSans';
+    font-size: 100px;
+    font-weight: 400;
+}
