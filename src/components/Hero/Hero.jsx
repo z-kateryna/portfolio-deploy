@@ -1,5 +1,4 @@
 import "./Hero.scss";
-import Picture from "../../assets/images/image.svg";
 import AbbvieLogo from "../../assets/images/abbvie.svg";
 import AgiosLogo from "../../assets/images/agios.svg";
 import COB from "../../assets/images/COB.svg";
@@ -7,6 +6,7 @@ import GSK from "../../assets/images/GSK.svg";
 import Novartis from "../../assets/images/novartis.svg";
 import Sanofi from "../../assets/images/sanofi.svg";
 import Nowsta from "../../assets/images/nowsta.svg";
+import Portrait from "../../assets/images/my-picture.svg"
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="hero">
         <div className="hero__first-line">
           <p className="hero__header">Hi, I'm Kat</p>
-          <img className="hero__picture" src={Picture} />
+          <img className="hero__picture" src={Portrait} />
         </div>
         <div className="hero__copy">
           <p className="hero__header"><span className="hero__header--bold">UX/UI Designer</span> bridging Dev and Design to create <span className="hero__header--italic">thoughtful, beautiful, and impactful solutions</span>.</p>

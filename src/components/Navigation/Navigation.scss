@@ -83,6 +83,10 @@
       }
     }
 
+    &__menu--link {
+      color: $copy;
+    }
+
     &__arrow {
       transition: transform 0.3s ease;
     }

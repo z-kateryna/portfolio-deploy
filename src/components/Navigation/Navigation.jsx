@@ -54,17 +54,17 @@ export default function Homepage() {
           </div>
           <ul className="nav__menu-container">
             <li className="nav__menu--item">
-              <a href="#">Home</a>
+              <a className="nav__menu--link" href="#">Home</a>
             </li>
             <li className="nav__menu--item">
-              <a href="#">About</a>
+              <a className="nav__menu--link" href="#">About</a>
             </li>
             <li className="nav__menu--item">
-              <a href="#">Coding</a>
+              <a className="nav__menu--link" href="#">Coding</a>
               <img className="nav__arrow" src={arrow} alt="" />
             </li>
             <li className="nav__menu--item">
-              <a href="#">Resume</a>
+              <a className="nav__menu--link" href="#">Resume</a>
               <img className="nav__arrow" src={arrow} alt="" />
             </li>
           </ul>
