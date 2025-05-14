@@ -1,4 +1,5 @@
 import "./Navigation.scss";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import arrow from "../../assets/icons/arrow.svg";
 import dribble from "../../assets/icons/dribbble.svg";
@@ -35,60 +36,73 @@ export default function Homepage() {
   }, [isHovered]);
 
   return (
-    <>
-      <div className="nav-wrapper">
-        <nav className="nav">
-          <div
-            className="nav__logo"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            style={{
-              fontFamily: "DMSans",
-              fontSize: "1.25rem",
-              fontWeight: "400",
-              cursor: "pointer",
-              whiteSpace: "nowrap",
-            }}
-          >
-            {displayed}
-          </div>
-          <ul className="nav__menu-container">
-            <li className="nav__menu--item">
-              <a className="nav__menu--link" href="#">Home</a>
-            </li>
-            <li className="nav__menu--item">
-              <a className="nav__menu--link" href="#">About</a>
-            </li>
-            <li className="nav__menu--item">
-              <a className="nav__menu--link" href="#">Coding</a>
-              <img className="nav__arrow" src={arrow} alt="" />
-            </li>
-            <li className="nav__menu--item">
-              <a className="nav__menu--link" href="#">Resume</a>
-              <img className="nav__arrow" src={arrow} alt="" />
-            </li>
-          </ul>
-          <div className="nav__icons-container">
-            <a className="nav__icon" href="#">
-              <img src={dribble} alt="github icon" />
+    <nav className="nav">
+      <div className="nav__wrapper">
+        <NavLink
+          to="/"
+          className="nav__logo"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          style={{
+            fontFamily: "DMSans",
+            fontSize: "1.25rem",
+            fontWeight: "400",
+            cursor: "pointer",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {displayed}
+        </NavLink>
+        <ul className="nav__menu-container">
+          <li className="nav__item">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav__link nav__link--active" : "nav__link"
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <a className="nav__link" href="#">
+              About
             </a>
-            <a className="nav__icon" href="#">
-              <img src={github} alt="github icon" />
+          </li>
+          <li className="nav__item">
+            <a className="nav__link" href="#">
+              Coding
             </a>
-            <a className="nav__icon" href="#">
-              <img src={linkedin} alt="github icon" />
+            <img className="nav__arrow" src={arrow} alt="" />
+          </li>
+          <li className="nav__item">
+            <a className="nav__link" href="#">
+              Resume
             </a>
-            <a className="nav__icon" href="#">
-              <img src={mail} alt="github icon" />
-            </a>
-          </div>
-          <img
-            className="nav__hamburger--icon"
-            src={HamburgerMenu}
-            alt=""
-            onClick={toggleMenu}
-          />
-        </nav>
+            <img className="nav__arrow" src={arrow} alt="" />
+          </li>
+        </ul>
+        <div className="nav__icons-container">
+          <a className="nav__icon" href="#">
+            <img src={dribble} alt="github icon" />
+          </a>
+          <a className="nav__icon" href="#">
+            <img src={github} alt="github icon" />
+          </a>
+          <a className="nav__icon" href="#">
+            <img src={linkedin} alt="github icon" />
+          </a>
+          <a className="nav__icon" href="#">
+            <img src={mail} alt="github icon" />
+          </a>
+        </div>
+        <img
+          className="nav__hamburger--icon"
+          src={HamburgerMenu}
+          alt=""
+          onClick={toggleMenu}
+        />
+
         <hr className="nav__line" />
         <div
           className={`nav__hamburger--container ${
@@ -120,21 +134,37 @@ export default function Homepage() {
             </li>
           </ul>
           <div className="nav__icons--hamburger">
-            <a href="#">
-              <img className="nav__icon--hamburger" src={dribble} alt="github icon" />
+            <a href="https://dribbble.com/KateZ">
+              <img
+                className="nav__icon--hamburger"
+                src={dribble}
+                alt="dribble icon"
+              />
             </a>
-            <a href="#">
-              <img className="nav__icon--hamburger" src={github} alt="github icon" />
+            <a href="https://github.com/z-kateryna">
+              <img
+                className="nav__icon--hamburger"
+                src={github}
+                alt="github icon"
+              />
             </a>
-            <a href="#">
-              <img className="nav__icon--hamburger" src={linkedin} alt="github icon" />
+            <a href="https://www.linkedin.com/in/kzabrodska/">
+              <img
+                className="nav__icon--hamburger"
+                src={linkedin}
+                alt="linkedin icon"
+              />
             </a>
-            <a href="#">
-              <img className="nav__icon--hamburger" src={mail} alt="github icon" />
+            <a href="mailto:zabrodskakateryna@gmail.com">
+              <img
+                className="nav__icon--hamburger"
+                src={mail}
+                alt="github icon"
+              />
             </a>
           </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 }

@@ -4,54 +4,88 @@
 @use "../../assets/styles/partials/variables" as *;
 
 .hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    height: 100%;
+  }
 
-    &__first-line {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 4rem;
-      padding-bottom: 0.5rem;
-    }
+  &__first-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+  }
 
-    &__header {
-      font-size: 2rem;
-      font-family: 'DMSans';
-      line-height: 1.2;
-      font-weight: 200;
-      text-align: left;
-    }
+  &__header {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    font-weight: 200;
+    text-align: left;
+  }
 
-    &__picture {
-      height: 2.25rem;
-    }
+  &__picture {
+    height: 2.8rem;
+  }
 
-    &__header--bold {
-      font-weight: 600;
-    }
-  
-    &__header--italic {
-      font-style: italic;
-    }
+  &__header--bold {
+    font-weight: 600;
+  }
 
-    &__logo-wrapper {
-      display: flex; 
-      gap: 0.5rem;
-      justify-content: center;
-      margin-top: 8rem;
-      flex-wrap: wrap;
-    }
+  &__header--italic {
+    font-style: italic;
+  }
 
-    &__brand-logo {
-      transform: scale(0.8);
+  &__icons-scroll {
+    overflow: hidden;
+  }
+
+  &__icons-track {
+    display: flex;
+    width: fit-content;
+    animation: scrollIcons 50s linear infinite;
+    gap: 3rem;
+
+    &:hover {
+      animation-play-state: paused;
     }
+  }
+
+  &__icon {
+    height: 2rem;
+    opacity: 80%;
+    flex-shrink: 0;
+  }
+
+  @keyframes scrollIcons {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  &__brand-logo {
+    transform: scale(0.8);
+    height: 2rem;
+    width: auto;
+  }
 
   @include tablet {
+    &__wrapper {
+      padding: 2rem;
+    }
+
     &__header {
       font-size: 2.5rem;
-      font-family: 'DMSans';
+      font-family: "DMSans";
       line-height: 1.2;
       font-weight: 200;
       text-align: left;
@@ -62,7 +96,7 @@
     }
 
     &__logo-wrapper {
-      display: flex; 
+      display: flex;
       gap: 1.25rem;
       justify-content: center;
       margin-top: 6rem;
@@ -76,55 +110,65 @@
   }
 
   @include desktop {
+    &__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
 
-  &__first-line {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 6rem;
-    padding-bottom: 0.5rem;
-  }
+    &__first-line {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      padding-bottom: 0.5rem;
+    }
 
-  &__picture {
-    height: 4rem;
-    &:hover {
-      animation: wiggle 0.5s ease-in-out;
+    &__picture {
+      height: 4rem;
+      &:hover {
+        animation: wiggle 0.5s ease-in-out;
+      }
+    }
+
+
+    &__header {
+      font-size: 3.25rem;
+      font-family: "DMSans";
+      line-height: 1.2;
+      font-weight: 200;
+    }
+
+    &__header--bold {
+      font-weight: 600;
+    }
+
+    &__header--italic {
+      font-style: italic;
+    }
+
+    &__logo-wrapper {
+      display: flex;
+      gap: 3.5rem;
+      justify-content: center;
+      margin-top: 12rem;
+      flex-wrap: wrap;
+    }
+
+    &__brand-logo {
+      transform: scale(1);
     }
   }
-
-  &__header {
-    font-size: 4rem;
-    font-family: 'DMSans';
-    line-height: 1.2;
-    font-weight: 200;
-  }
-
-  &__header--bold {
-    font-weight: 600;
-  }
-
-  &__header--italic {
-    font-style: italic;
-  }
-
-  &__logo-wrapper {
-    display: flex; 
-    gap: 3.5rem;
-    justify-content: center;
-    margin-top: 12rem;
-    flex-wrap: wrap;
-  }
-
-  &__brand-logo {
-    transform: scale(1);
-  }
-}
-
 }
 
 @keyframes wiggle {
-  0%, 100% { transform: rotate(0); }
-  25% { transform: rotate(3deg); }
-  75% { transform: rotate(-3deg); }
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
 }
-

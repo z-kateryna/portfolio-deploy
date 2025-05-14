@@ -6,29 +6,43 @@ import GSK from "../../assets/images/GSK.svg";
 import Novartis from "../../assets/images/novartis.svg";
 import Sanofi from "../../assets/images/sanofi.svg";
 import Nowsta from "../../assets/images/nowsta.svg";
-import Portrait from "../../assets/images/my-picture.svg"
+import Portrait from "../../assets/images/picture.png";
+
+const icons = [AbbvieLogo, AgiosLogo, COB, GSK, Novartis, Sanofi, Nowsta];
 
 export default function Hero() {
   return (
-    <>
-      <div className="hero">
-        <div className="hero__first-line">
-          <p className="hero__header">Hi, I'm Kat</p>
-          <img className="hero__picture" src={Portrait} />
+    <section className="hero">
+      <div className="hero__wrapper">
+        <div className="hero__content-container">
+          <div className="hero__first-line">
+            <p className="hero__header">Hi, I'm Kat</p>
+            <img className="hero__picture" src={Portrait} />
+          </div>
+          <div className="hero__copy">
+            <p className="hero__header">
+              <span className="hero__header--bold">UX/UI & Web Designer</span>{" "}
+              bridging Dev and Design to create{" "}
+              <span className="hero__header--italic">
+                thoughtful, beautiful, and impactful solutions
+              </span>
+              .
+            </p>
+          </div>
         </div>
-        <div className="hero__copy">
-          <p className="hero__header"><span className="hero__header--bold">UX/UI Designer</span> bridging Dev and Design to create <span className="hero__header--italic">thoughtful, beautiful, and impactful solutions</span>.</p>
-        </div>
-        <div className="hero__logo-wrapper">
-            <img className="hero__brand-logo" src={AbbvieLogo}/>
-            <img className="hero__brand-logo" src={AgiosLogo}/>
-            <img className="hero__brand-logo" src={COB}/>
-            <img className="hero__brand-logo" src={GSK}/>
-            <img className="hero__brand-logo" src={Novartis}/>
-            <img className="hero__brand-logo" src={Sanofi}/>
-            <img className="hero__brand-logo" src={Nowsta}/>
+        <div className="hero__icons-scroll">
+          <div className="hero__icons-track">
+            {[...icons, ...icons].map((icon, index) => (
+              <img
+                key={index}
+                src={icon}
+                className="hero__icon"
+                alt="tech icon"
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </>
+        </section>
   );
 }

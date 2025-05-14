@@ -4,14 +4,22 @@
 @use "../../assets/styles/partials/variables" as *;
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 2rem;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+  }
 
   &__menu-container,
   &__icons-container {
     display: none;
+  }
+
+  &__link {
+    font-size: 1.15rem;
+    color: $copy;
   }
 
   &__hamburger--container {
@@ -46,12 +54,21 @@
   }
 
   &__icon--hamburger {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
   }
 
   &__arrow {
     padding-left: 0.25rem;
+  }
+
+  &__line {
+    display: none;
+  }
+
+  @include tablet {
+    &__wrapper {
+      padding: 2rem;
+    }
   }
 
   @include desktop {
@@ -60,12 +77,18 @@
     align-items: center;
     padding-bottom: 2rem;
 
+    &__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
     &__logo {
       font-size: 1.25rem;
       font-weight: 400;
-      width: 33%;
+      width: 120px;
       display: flex;
       justify-content: flex-start;
+      color: $copy;
     }
 
     &__menu-container {
@@ -74,7 +97,7 @@
       width: 33%;
     }
 
-    &__menu--item {
+    &__item {
       display: flex;
       gap: 0.25rem;
 
