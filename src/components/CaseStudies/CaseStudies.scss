@@ -4,12 +4,16 @@
 @use "../../assets/styles/partials/variables" as *;
 
 .case-studies {
-  margin-top: 4rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  width: 100%;
+  padding: 1rem;
+
+  &__wrapper {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+  }
 
   &__pyrukynd,
   &__myagios,
@@ -70,6 +74,7 @@
   }
 
   @include tablet {
+    padding: 2rem;
     margin-top: 5rem;
 
     &__pyrukynd,
@@ -82,6 +87,11 @@
   }
 
   @include desktop {
+    &__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
     margin-top: 6rem;
     display: flex;
     flex-wrap: wrap;
@@ -92,7 +102,7 @@
     &__myagios,
     &__nowsta,
     &__cob {
-      width: 590px;
+      width: 48%;
       margin-bottom: 4rem;
     }
 
