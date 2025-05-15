@@ -9,6 +9,10 @@
   margin-top: 4rem;
   justify-content: center;
 
+  &__container {
+    padding: 1rem;
+  }
+
   &__header {
     font-size: 1.75rem;
     text-align: left;
@@ -28,6 +32,7 @@
     width: 100%;
     margin-bottom: 2rem;
     flex-direction: column;
+    padding-left: 1rem;
   }
 
   &__comment-wrapper {
@@ -48,7 +53,7 @@
     font-family: "DMSans";
     font-style: italic;
     line-height: 1;
-    vertical-align: -0.9rem;
+    vertical-align: -1.5rem;
   }
 
   &__copy {
@@ -70,7 +75,6 @@
   }
 
   @include tablet {
-
     &__wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -87,10 +91,17 @@
   }
 
   @include desktop {
+    
+    &__container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
     &__header {
       font-size: 2.5rem;
       text-align: left;
-      padding-bottom: 4rem;
+      padding-bottom: 3rem;
       font-weight: 600;
     }
 
@@ -102,9 +113,10 @@
 
     &__comment {
       display: flex;
-      width: 590px;
+      width: 48%;
       margin-bottom: 4rem;
       flex-direction: column;
+      padding-left: 0;
     }
 
     &__author {

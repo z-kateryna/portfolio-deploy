@@ -2,3 +2,16 @@
 @use "../../assets/styles/partials/mixins" as *;
 @use "../../assets/styles/partials/globals" as *;
 @use "../../assets/styles/partials/variables" as *;
+
+// .pyrukynd {
+//     padding: 1rem;
+
+//     @include tablet {
+//         padding: 2rem;
+//     }
+
+//     @include desktop {
+//         max-width: 1024px;
+//         margin: 0 auto;
+//     }
+// }

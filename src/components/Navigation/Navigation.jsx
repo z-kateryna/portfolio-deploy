@@ -36,7 +36,7 @@ export default function Homepage() {
   }, [isHovered]);
 
   return (
-    <nav className="nav">
+    <nav className="nav" aria-label="Main navigation">
       <div className="nav__wrapper">
         <NavLink
           to="/"
@@ -83,16 +83,31 @@ export default function Homepage() {
           </li>
         </ul>
         <div className="nav__icons-container">
-          <a className="nav__icon" href="#">
-            <img src={dribble} alt="github icon" />
+          <a
+            className="nav__icon--link"
+            href="https://dribbble.com/KateZ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={dribble} alt="dribble icon" />
           </a>
-          <a className="nav__icon" href="#">
+          <a
+            className="nav__icon--link"
+            href="https://github.com/z-kateryna"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={github} alt="github icon" />
           </a>
-          <a className="nav__icon" href="#">
-            <img src={linkedin} alt="github icon" />
+          <a
+            className="nav__icon--link"
+            href="https://www.linkedin.com/in/kzabrodska"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedin} alt="linkedin icon" />
           </a>
-          <a className="nav__icon" href="#">
+          <a className="nav__icon" href="mailto:zabrodskakateryna@gmail.com">
             <img src={mail} alt="github icon" />
           </a>
         </div>
