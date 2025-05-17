@@ -36,7 +36,7 @@ export default function Homepage() {
   }, [isHovered]);
 
   return (
-    <nav className="nav" aria-label="Main navigation">
+    <section className="nav" aria-label="Main navigation">
       <div className="nav__wrapper">
         <NavLink
           to="/"
@@ -111,14 +111,13 @@ export default function Homepage() {
             <img src={mail} alt="github icon" />
           </a>
         </div>
+      
         <img
           className="nav__hamburger--icon"
           src={HamburgerMenu}
           alt=""
           onClick={toggleMenu}
         />
-
-        <hr className="nav__line" />
         <div
           className={`nav__hamburger--container ${
             menuOpen ? "open" : "closed"
@@ -180,6 +179,8 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-    </nav>
+
+    </section>
+    
   );
 }

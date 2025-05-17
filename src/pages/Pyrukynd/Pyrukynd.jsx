@@ -9,11 +9,9 @@ export default function Pyrukynd() {
       <Navigation />
       <div className="pyrukynd__wrapper">
         < ScrollProgressBar />
-        <article>
-          <section id="overview">...</section>
-          <section id="goal">...</section>
-          <section id="challenge">...</section>
-        </article>
+        <div className="pyrykynd__overview">
+
+        </div>
       </div>
       <Footer />
     </section>

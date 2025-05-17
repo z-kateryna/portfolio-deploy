@@ -7,7 +7,6 @@
   padding: 1rem;
 
   &__wrapper {
-    margin-top: 4rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -44,7 +43,6 @@
     padding: 0.25rem 0.5rem;
     border-radius: 20px;
     color: #606367;
-    // background-color: $grey-bkgrd;
     font-size: 1rem;
   }
 
@@ -97,7 +95,6 @@
 
   @include tablet {
     padding: 2rem;
-    margin-top: 5rem;
 
     &__pyrukynd,
     &__myagios,
@@ -109,16 +106,15 @@
   }
 
   @include desktop {
-    &__wrapper {
-      max-width: 1024px;
-      margin: 0 auto;
-    }
-
-    margin-top: 6rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+
+    &__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
 
     &__pyrukynd,
     &__myagios,
