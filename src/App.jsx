@@ -6,6 +6,7 @@ import Pyrukynd from "./pages/Pyrukynd/Pyrukynd";
 import MyAgios from "./pages/MyAgios/MyAgios";
 import Nowsta from "./pages/Nowsta/Nowsta";
 import COB from "./pages/COB/COB";
+import Coding from "./pages/Coding/Coding"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/my-agios" element={<MyAgios />} />
         <Route path="/nowsta" element={<Nowsta />} />
         <Route path="/city-of-boston" element={<COB />} />
+            <Route path="/coding" element={<Coding />} />
       </Routes>
     </BrowserRouter>
   )

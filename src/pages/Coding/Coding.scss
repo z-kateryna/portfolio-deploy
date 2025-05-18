@@ -1,0 +1,45 @@
+@use "../../assets/styles/partials/typography";
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/globals" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.coding {
+  &__wrapper {
+    padding: 1rem;
+  }
+
+  &__hero-header {
+    font-size: 2.16rem;
+    line-height: 1.2;
+    font-weight: 200;
+    text-align: left;
+  }
+
+&__first-line {
+// display: flex;
+// align-items: center;
+}
+
+  &__gif {
+    width: 6rem;
+    height: 3.25rem;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  &__img--cat {
+    width: 5rem;
+    height: 3.25rem;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  @include tablet {
+    padding: 2rem;
+  }
+
+  @include desktop {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

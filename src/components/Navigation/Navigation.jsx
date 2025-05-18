@@ -70,9 +70,9 @@ export default function Homepage() {
             </a>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#">
+            <NavLink className="nav__link" to="/coding">
               Coding
-            </a>
+            </NavLink>
             {/* <img className="nav__arrow" src={arrow} alt="" /> */}
           </li>
           <li className="nav__item">
