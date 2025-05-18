@@ -73,10 +73,15 @@ export default function Homepage() {
             <a className="nav__link" href="#">
               Coding
             </a>
-            <img className="nav__arrow" src={arrow} alt="" />
+            {/* <img className="nav__arrow" src={arrow} alt="" /> */}
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#">
+            <a
+              className="nav__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://docs.google.com/document/d/1BMkniZ-K59fPmpBDy1iSE0BlenlfX8Bi/edit?usp=sharing&ouid=111396631844579547834&rtpof=true&sd=true"
+            >
               Resume
             </a>
             <img className="nav__arrow" src={arrow} alt="" />
@@ -111,7 +116,7 @@ export default function Homepage() {
             <img src={mail} alt="github icon" />
           </a>
         </div>
-      
+
         <img
           className="nav__hamburger--icon"
           src={HamburgerMenu}
@@ -141,7 +146,12 @@ export default function Homepage() {
               <img className="nav__arrow" src={arrow} alt="" />
             </li>
             <li className="nav__hamburger--li">
-              <a className="nav__hamburger--item" href="#">
+              <a
+                className="nav__hamburger--item"
+                href="https://docs.google.com/document/d/1BMkniZ-K59fPmpBDy1iSE0BlenlfX8Bi/edit?usp=sharing&ouid=111396631844579547834&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Resume
               </a>
               <img className="nav__arrow" src={arrow} alt="" />
@@ -153,6 +163,8 @@ export default function Homepage() {
                 className="nav__icon--hamburger"
                 src={dribble}
                 alt="dribble icon"
+                target="_blank"
+                rel="noopener noreferrer"
               />
             </a>
             <a href="https://github.com/z-kateryna">
@@ -160,6 +172,8 @@ export default function Homepage() {
                 className="nav__icon--hamburger"
                 src={github}
                 alt="github icon"
+                target="_blank"
+                rel="noopener noreferrer"
               />
             </a>
             <a href="https://www.linkedin.com/in/kzabrodska/">
@@ -167,6 +181,8 @@ export default function Homepage() {
                 className="nav__icon--hamburger"
                 src={linkedin}
                 alt="linkedin icon"
+                target="_blank"
+                rel="noopener noreferrer"
               />
             </a>
             <a href="mailto:zabrodskakateryna@gmail.com">
@@ -174,13 +190,13 @@ export default function Homepage() {
                 className="nav__icon--hamburger"
                 src={mail}
                 alt="github icon"
+                target="_blank"
+                rel="noopener noreferrer"
               />
             </a>
           </div>
         </div>
       </div>
-
     </section>
-    
   );
 }

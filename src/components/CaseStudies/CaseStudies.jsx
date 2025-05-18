@@ -57,8 +57,16 @@ export default function CaseStudies() {
             <div className="case-studies__tag">Pharma</div>
           </div>
           <div className="case-studies__copy-container">
-            <h2 className="case-studies__header">Redesigning and repurposing myAgios.com to support a new patient-centered architecture and seamless redirect to Pyrukynd.com</h2>
-            <p className="case-studies__copy">Overview</p>
+            <h2 className="case-studies__header">
+              Redesigning and repurposing myAgios.com to support a new
+              patient-centered architecture
+            </h2>
+            <p className="case-studies__copy">
+              Shifting myAgios.com from a provider-focused platform to a
+              patient-centered experience by restructuring the site architecture
+              and prioritizing accessible, patient-relevant content resulted in
+              significantly improved engagement and reduced bounce rates.
+            </p>
             <button className="case-studies__btn">
               Read case study
               <img src={Arrow} className="case-studies__arrow-left" />
@@ -68,33 +76,47 @@ export default function CaseStudies() {
         <a className="case-studies__nowsta" href="#">
           <img className="case-studies__nowsta--img" src={NowstaMockUp} />
           <div className="case-studies__tag-container">
+            <div className="case-studies__tag">UX/UI Design</div>
+            <div className="case-studies__tag">Research</div>
             <div className="case-studies__tag">Visual Design</div>
-            <div className="case-studies__tag">Visual Design</div>
-            <div className="case-studies__tag">Visual Design</div>
+            <div className="case-studies__tag">SaaS</div>
+            <div className="case-studies__tag">Native app</div>
+            <div className="case-studies__tag">Agile</div>
           </div>
           <div className="case-studies__copy-container">
-            <h2 className="case-studies__header">Title</h2>
-            <p className="case-studies__copy">Overview</p>
-            {/* <button className="case-studies__btn">
-              Read Case Study
-              <img src={Arrow} />
-            </button> */}
+            <h2 className="case-studies__header">
+              Timeclock App redesign for Nowsta to enhance UX and ensure UI
+              consistency across all products
+            </h2>
+            <p className="case-studies__copy">
+              Redesigned the Timeclock app to streamline the clock-in process,
+              reducing user interaction time from over 15 seconds to under 7
+              seconds. The new design features a simplified experience built
+              with the Nowsta design system, improving speed and usability.
+            </p>
+            <button className="case-studies__btn">
+              Case study coming soon
+              {/* <img src={Arrow} className="case-studies__arrow-left" /> */}
+            </button>
           </div>
         </a>
         <a className="case-studies__cob" href="#">
           <img className="case-studies__cob--img" src={COBMockUp} />
           <div className="case-studies__tag-container">
-            <div className="case-studies__tag">Visual Design</div>
-            <div className="case-studies__tag">Visual Design</div>
-            <div className="case-studies__tag">Visual Design</div>
+            <div className="case-studies__tag">Newsletter template</div>
+            <div className="case-studies__tag">UX/UI Design</div>
+            <div className="case-studies__tag">UX/UI Design</div>
+            <div className="case-studies__tag">Research</div>
+            <div className="case-studies__tag">Government</div>
+            <div className="case-studies__tag">Accessibility</div>
           </div>
           <div className="case-studies__copy-container">
-            <h2 className="case-studies__header">Title</h2>
-            <p className="case-studies__copy">Overview</p>
-            {/* <button className="case-studies__btn">
-              Read Case Study
-              <img src={Arrow} />
-            </button> */}
+            <h2 className="case-studies__header">Redesigning city of Boston’s e-newsletter: enhancing usability and streamlining creation</h2>
+            <p className="case-studies__copy">Driven by thorough research, the redesign not only elevated reader engagement and improved accessibility but also streamlined the newsletter creation process, delivering a more efficient and user-friendly solution for city employees.</p>
+           <button className="case-studies__btn">
+              Case study coming soon
+              {/* <img src={Arrow} className="case-studies__arrow-left" /> */}
+            </button>
           </div>
         </a>
       </div>
