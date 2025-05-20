@@ -7,6 +7,7 @@ import github from "../../assets/icons/github.svg";
 import linkedin from "../../assets/icons/linkedIn.svg";
 import mail from "../../assets/icons/mail.svg";
 import HamburgerMenu from "../../assets/icons/hamburger_menu.svg";
+import CloseIcon from "../../assets/icons/close.svg";
 
 export default function Homepage() {
   const fullName = "Kateryna Zabrodska";
@@ -28,8 +29,6 @@ export default function Homepage() {
         index++;
         if (index > fullName.length) clearInterval(interval);
       }, 100);
-      // } else {
-      //   setDisplayed("K");
     }
 
     return () => clearInterval(interval);
@@ -65,15 +64,24 @@ export default function Homepage() {
             </NavLink>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "nav__link nav__link--active" : "nav__link"
+              }
+            >
               About
-            </a>
+            </NavLink>
           </li>
           <li className="nav__item">
-            <NavLink className="nav__link" to="/coding">
+            <NavLink
+              to="/coding"
+              className={({ isActive }) =>
+                isActive ? "nav__link nav__link--active" : "nav__link"
+              }
+            >
               Coding
             </NavLink>
-            {/* <img className="nav__arrow" src={arrow} alt="" /> */}
           </li>
           <li className="nav__item">
             <a
@@ -87,6 +95,7 @@ export default function Homepage() {
             <img className="nav__arrow" src={arrow} alt="" />
           </li>
         </ul>
+
         <div className="nav__icons-container">
           <a
             className="nav__icon--link"
@@ -113,16 +122,18 @@ export default function Homepage() {
             <img src={linkedin} alt="linkedin icon" />
           </a>
           <a className="nav__icon" href="mailto:zabrodskakateryna@gmail.com">
-            <img src={mail} alt="github icon" />
+            <img src={mail} alt="mail icon" />
           </a>
         </div>
 
-        <img
+                <img
           className="nav__hamburger--icon"
-          src={HamburgerMenu}
-          alt=""
+          src={menuOpen ? CloseIcon : HamburgerMenu}
+          alt={menuOpen ? "close menu icon" : "open menu icon"}
           onClick={toggleMenu}
+          aria-expanded={menuOpen}
         />
+
         <div
           className={`nav__hamburger--container ${
             menuOpen ? "open" : "closed"
@@ -130,19 +141,40 @@ export default function Homepage() {
         >
           <ul className="nav__hamburger--ul">
             <li className="nav__hamburger--li">
-              <a className="nav__hamburger--item" href="#">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav__hamburger--item nav__link--active"
+                    : "nav__hamburger--item"
+                }
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav__hamburger--li">
-              <a className="nav__hamburger--item" href="#">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav__hamburger--item nav__link--active"
+                    : "nav__hamburger--item"
+                }
+              >
                 About
-              </a>
+              </NavLink>
             </li>
             <li className="nav__hamburger--li">
-              <a className="nav__hamburger--item" href="#">
+              <NavLink
+                to="/coding"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav__hamburger--item nav__link--active"
+                    : "nav__hamburger--item"
+                }
+              >
                 Coding
-              </a>
+              </NavLink>
               <img className="nav__arrow" src={arrow} alt="" />
             </li>
             <li className="nav__hamburger--li">
@@ -163,8 +195,6 @@ export default function Homepage() {
                 className="nav__icon--hamburger"
                 src={dribble}
                 alt="dribble icon"
-                target="_blank"
-                rel="noopener noreferrer"
               />
             </a>
             <a href="https://github.com/z-kateryna">
@@ -172,8 +202,6 @@ export default function Homepage() {
                 className="nav__icon--hamburger"
                 src={github}
                 alt="github icon"
-                target="_blank"
-                rel="noopener noreferrer"
               />
             </a>
             <a href="https://www.linkedin.com/in/kzabrodska/">
@@ -181,17 +209,13 @@ export default function Homepage() {
                 className="nav__icon--hamburger"
                 src={linkedin}
                 alt="linkedin icon"
-                target="_blank"
-                rel="noopener noreferrer"
               />
             </a>
             <a href="mailto:zabrodskakateryna@gmail.com">
               <img
                 className="nav__icon--hamburger"
                 src={mail}
-                alt="github icon"
-                target="_blank"
-                rel="noopener noreferrer"
+                alt="mail icon"
               />
             </a>
           </div>
