@@ -68,7 +68,7 @@ export default function CaseStudies() {
               significantly improved engagement and reduced bounce rates.
             </p>
             <button className="case-studies__btn">
-              Read case study
+                   Case study coming soon
               <img src={Arrow} className="case-studies__arrow-left" />
             </button>
           </div>

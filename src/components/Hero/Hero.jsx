@@ -21,12 +21,12 @@ export default function Hero() {
           </div>
           <div className="hero__copy">
             <p className="hero__header">
-              <span className="hero__header--bold">UX/UI & Web Designer</span>{" "}
-              bridging Dev and Design to create{" "}
+              <span className="hero__header--bold">UX/UI Designer</span>{" "}
+              specializing in {" "}
               <span className="hero__header--italic">
-                thoughtful, beautiful, and impactful solutions
+                compliant, accessible, and beautiful 
               </span>
-              .
+              &nbsp;digital experiences for patients and healthcare providers.
             </p>
           </div>
         </div>
