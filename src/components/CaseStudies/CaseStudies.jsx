@@ -58,17 +58,17 @@ export default function CaseStudies() {
           </div>
           <div className="case-studies__copy-container">
             <h2 className="case-studies__header">
-              Redesigning and repurposing myAgios.com to support a new
-              patient-centered architecture
+              Redesigning and repurposing myAgios.com to create a new
+              centralized digital experience
             </h2>
             <p className="case-studies__copy">
-              Shifting myAgios.com from a provider-focused platform to a
-              patient-centered experience by restructuring the site architecture
-              and prioritizing accessible, patient-relevant content resulted in
-              significantly improved engagement and reduced bounce rates.
+              A compassionate digital overhaul that reduced bounce rates by 34%,
+              boosted engagement by 48%, and tripled Patient Support Manager
+              inquiries—transforming a clinical platform into a trusted support
+              system for the PK deficiency community.
             </p>
             <button className="case-studies__btn">
-                   Case study coming soon
+              Case study coming soon
               <img src={Arrow} className="case-studies__arrow-left" />
             </button>
           </div>
@@ -111,9 +111,17 @@ export default function CaseStudies() {
             <div className="case-studies__tag">Accessibility</div>
           </div>
           <div className="case-studies__copy-container">
-            <h2 className="case-studies__header">Redesigning city of Boston’s e-newsletter: enhancing usability and streamlining creation</h2>
-            <p className="case-studies__copy">Driven by thorough research, the redesign not only elevated reader engagement and improved accessibility but also streamlined the newsletter creation process, delivering a more efficient and user-friendly solution for city employees.</p>
-           <button className="case-studies__btn">
+            <h2 className="case-studies__header">
+              Redesigning city of Boston’s e-newsletter: enhancing usability and
+              streamlining creation
+            </h2>
+            <p className="case-studies__copy">
+              Driven by thorough research, the redesign not only elevated reader
+              engagement and improved accessibility but also streamlined the
+              newsletter creation process, delivering a more efficient and
+              user-friendly solution for city employees.
+            </p>
+            <button className="case-studies__btn">
               Case study coming soon
               {/* <img src={Arrow} className="case-studies__arrow-left" /> */}
             </button>
