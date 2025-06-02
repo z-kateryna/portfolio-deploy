@@ -1,5 +1,5 @@
 import "./CaseStudies.scss";
-import Arrow from "../../assets/icons/arrow-right.svg";
+import Arrow from "../../assets/icons/arrow.svg";
 import PurykundMockUp from "../../assets/images/mock-up-test.jpg";
 import MyAgiosMockUp from "../../assets/images/myagios-mock-up.jpg";
 import NowstaMockUp from "../../assets/images/nowsta-mock-up.jpg";
@@ -45,7 +45,12 @@ export default function CaseStudies() {
           </div>
         </a>
 
-        <Link className="case-studies__myagios" to="/my-agios">
+        <a
+          className="case-studies__myagios"
+          href="https://www.figma.com/proto/QZjsDHcGvM8pUWDZnYCatP/Portfolio-pages?node-id=37-41&t=V7pMrZcjpK5yZUsq-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A49"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img className="case-studies__myagios--img" src={MyAgiosMockUp} />
           <div className="case-studies__tag-container">
             <div className="case-studies__tag">UX/UI Design</div>
@@ -58,21 +63,21 @@ export default function CaseStudies() {
           </div>
           <div className="case-studies__copy-container">
             <h2 className="case-studies__header">
-              Redesigning and repurposing myAgios.com to create a new
-              centralized digital experience
+              Redesigning and repurposing myAgios.com to support a new
+              patient-centered architecture
             </h2>
             <p className="case-studies__copy">
-              A compassionate digital overhaul that reduced bounce rates by 34%,
-              boosted engagement by 48%, and tripled Patient Support Manager
-              inquiries—transforming a clinical platform into a trusted support
-              system for the PK deficiency community.
+              Shifting myAgios.com from a provider-focused platform to a
+              patient-centered experience by restructuring the site architecture
+              and prioritizing accessible, patient-relevant content resulted in
+              significantly improved engagement and reduced bounce rates.
             </p>
             <button className="case-studies__btn">
-              Case study coming soon
+              See case study
               <img src={Arrow} className="case-studies__arrow-left" />
             </button>
           </div>
-        </Link>
+        </a>
         <a className="case-studies__nowsta" href="#">
           <img className="case-studies__nowsta--img" src={NowstaMockUp} />
           <div className="case-studies__tag-container">
