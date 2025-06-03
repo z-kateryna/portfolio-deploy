@@ -25,10 +25,7 @@ export default function About() {
                   I'm a Ukrainian native who first dove into UX/UI design in
                   2020, bringing with me a background in hospitality—and the
                   "guest is always right" mindset—to create thoughtful,
-                  user-centered digital experiences. That's why I take a holistic approach to product
-                  design—specializing in patient-facing healthcare interfaces
-                  and high-conversion product marketing pages, where clarity,
-                  accessibility, and emotional impact all matter. 
+                  user-centered digital experiences. That's why I take a holistic approach to product design—specializing in patient-facing healthcare interfaces and high-conversion product marketing pages, where clarity, accessibility, and emotional impact all matter.
                 </p>
                   <p className="about__copy">My philosophy is simple: the aesthetic–usability effect is real. That’s why I
                   strive to create inclusive, compliant, and visually compelling
@@ -45,29 +42,35 @@ export default function About() {
           </div>
           <div className="about__tags-wrapper">
             <h3 className="about__header--small">My toolkit</h3>
-            <div className="about__tags-container">
-              <div className="about__tag">HTML</div>
-              <div className="about__tag">CSS</div>
-              <div className="about__tag">Javascript</div>
-              <div className="about__tag">Sass</div>
-              <div className="about__tag">Tailwind</div>
-              <div className="about__tag">React</div>
-              <div className="about__tag">Node.js</div>
-              <div className="about__tag">Express</div>
-              <div className="about__tag">Mysql</div>
-              <div className="about__tag">Bootstrap</div>
-              <div className="about__tag">Github</div>
-              <div className="about__tag">Postman</div>
-              <div className="about__tag">Webflow</div>
-              <div className="about__tag">Framer</div>
-              <div className="about__tag">Wix</div>
-              <div className="about__tag">Figma</div>
-              <div className="about__tag">Miro</div>
-              <div className="about__tag">Jira</div>
-              <div className="about__tag">Photoshop</div>
-              <div className="about__tag">Illustrator</div>
-              <div className="about__tag">InDesign</div>
-            </div>
+          <div className="about__tags-container">
+            {[
+              "HTML",
+              "CSS",
+              "Javascript",
+              "Sass",
+              "Tailwind",
+              "React",
+              "Node.js",
+              "Express",
+              "Mysql",
+              "Bootstrap",
+              "Github",
+              "Postman",
+              "Webflow",
+              "Framer",
+              "Wix",
+              "Figma",
+              "Miro",
+              "Jira",
+              "Photoshop",
+              "Illustrator",
+              "InDesign",
+            ].map((skill) => (
+              <div key={skill} className="coding__tag">
+                {skill}
+              </div>
+            ))}
+          </div>
           </div>
         </div>
       </section>
