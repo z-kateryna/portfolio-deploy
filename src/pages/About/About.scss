@@ -2,3 +2,110 @@
 @use "../../assets/styles/partials/mixins" as *;
 @use "../../assets/styles/partials/globals" as *;
 @use "../../assets/styles/partials/variables" as *;
+
+.about {
+  padding: 1rem;
+
+  &__header--big {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  &__header--it {
+    font-style: italic;
+  }
+
+  &__header--green {
+    // font-style: italic;
+    color: $copy;
+    font-weight: 500;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__header--small {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-bottom: 1rem;
+  }
+
+  &__copy {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__tags-wrapper {
+    margin-top: 4rem;
+  }
+
+  &__tags-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+
+  &__tag {
+    font-size: rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $brand-green;
+    border-radius: 25px;
+    color: $copy;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(38, 38, 38, 0.15);
+      cursor: default;
+      background-color: #e1e8dc;
+    }
+  }
+
+  @include tablet {
+    &__img {
+      width: 40%;
+      margin-bottom: 0;
+      height: auto;
+    }
+
+    &__content-container {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__header--big {
+      font-size: 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+      line-height: 1.2;
+    }
+
+    &__copy {
+      font-size: 1.2rem;
+    }
+  }
+
+  @include desktop {
+    &__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  }
+}
