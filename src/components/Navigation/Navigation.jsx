@@ -97,14 +97,14 @@ export default function Homepage() {
         </ul>
 
         <div className="nav__icons-container">
-          <a
+          {/* <a
             className="nav__icon--link"
             href="https://dribbble.com/KateZ"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={dribble} alt="dribble icon" />
-          </a>
+          </a> */}
           <a
             className="nav__icon--link"
             href="https://github.com/z-kateryna"

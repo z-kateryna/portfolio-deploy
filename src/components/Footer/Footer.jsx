@@ -11,14 +11,14 @@ export default function Footer() {
       <div className="footer__wrapper">
         <div className="footer__icons--wrapper">
           <div className="footer__icons--container">
-            <a
+            {/* <a
               className="footer__icon"
               href="https://dribbble.com/KateZ"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={dribble} alt="dribble icon" />
-            </a>
+            </a> */}
             <a
               className="footer__icon"
               href="https://github.com/z-kateryna"

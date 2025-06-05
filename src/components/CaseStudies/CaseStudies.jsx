@@ -78,7 +78,12 @@ export default function CaseStudies() {
             </button>
           </div>
         </a>
-        <a className="case-studies__nowsta" href="#">
+        <a
+          className="case-studies__nowsta"
+          href="https://www.figma.com/proto/QZjsDHcGvM8pUWDZnYCatP/Portfolio-pages?node-id=95-6381&t=WulTsZAgr04CUOUx-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A49"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img className="case-studies__nowsta--img" src={NowstaMockUp} />
           <div className="case-studies__tag-container">
             <div className="case-studies__tag">UX/UI Design</div>
@@ -100,8 +105,8 @@ export default function CaseStudies() {
               with the Nowsta design system, improving speed and usability.
             </p>
             <button className="case-studies__btn">
-              Case study coming soon
-              {/* <img src={Arrow} className="case-studies__arrow-left" /> */}
+              See case study
+              <img src={Arrow} className="case-studies__arrow-left" />
             </button>
           </div>
         </a>
